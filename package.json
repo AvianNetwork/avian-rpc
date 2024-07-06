@@ -33,14 +33,14 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@ravenite/ravencoin-rpc",
+  "name": "@aviannetwork/avian-rpc",
   "author": "Michael McShinsky",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ravenites/ravencoin-rpc",
+    "url": "https://github.com/AvianNetwork/avian-rpc",
     "directory": "packages/rpc"
   },
-  "module": "dist/ravencoin-rpc.esm.js",
+  "module": "dist/avian-rpc.esm.js",
   "devDependencies": {
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/node": "^17.0.23",

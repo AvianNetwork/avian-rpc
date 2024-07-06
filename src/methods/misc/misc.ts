@@ -136,7 +136,7 @@ export class Misc {
    * @param params
    * @param {Array} params.addresses            Array of base58check encoded addresses
    * @param {boolean=} [params.chainInfo=false] Include chain info with results
-   * @param {string=} params.assetName          Get UTXOs for a particular asset instead of RVN ('*' for all assets).
+   * @param {string=} params.assetName          Get UTXOs for a particular asset instead of AVN ('*' for all assets).
    * @returns {Promise<GetAddressUtxosResponse[]>}
    */
   getAddressUtxos(params: GetAddressUtxos): Promise<GetAddressUtxosResponse[]> {
@@ -154,7 +154,7 @@ export class Misc {
    * @param {number} params.start      The start block height
    * @param {number} params.end        The end block height
    * @param {boolean} params.chainInfo Include chain info in results, only applies if start and end specified
-   * @param {string=} params.assetName Get deltas for a particular asset instead of RVN.
+   * @param {string=} params.assetName Get deltas for a particular asset instead of AVN.
    * @returns {Promise<GetAddressDeltasResponse[]>}
    */
   getAddressDeltas(

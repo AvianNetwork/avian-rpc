@@ -61,7 +61,7 @@ export type TransferFromAddress = {
   to_address: string;
   message?: string;
   expire_time?: number;
-  rvn_change_address?: string;
+  avn_change_address?: string;
   asset_change_address?: string;
 };
 
@@ -72,7 +72,7 @@ export type TransferFromAddresses = {
   to_address: string;
   message?: string;
   expire_time?: number;
-  rvn_change_address?: string;
+  avn_change_address?: string;
   asset_change_address?: string;
 };
 

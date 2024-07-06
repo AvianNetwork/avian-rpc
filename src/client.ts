@@ -13,7 +13,7 @@ import {
 import { Config, IClient, RpcError } from './types';
 
 /**
- * Create a RPC Client to connect to a Ravencoin node.
+ * Create a RPC Client to connect to a Avian node.
  * @class Client
  * @category Client
  * @param config
@@ -22,7 +22,7 @@ import { Config, IClient, RpcError } from './types';
  * @param {string} config.password RPC password
  * @param {Objct=} config.httpOptions HTTP options object of values to add to request headers
  * @example
- *  import Client from '@ravenite/ravencoin-rpc';
+ *  import Client from '@aviannetwork/avian-rpc';
 
 const client = new Client({
   url: 'http://127.0.0.1:9050',

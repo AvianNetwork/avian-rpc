@@ -1,4 +1,4 @@
-// https://github.com/RavenProject/Ravencoin/blob/master/src/rpc/rawtransaction.cpp
+// https://github.com/AvianNetwork/Avian/blob/master/src/rpc/rawtransaction.cpp
 
 import { IClient } from '@/types';
 import {
@@ -59,15 +59,15 @@ export class RawTransactions {
   /**
    * Create a transaction spending the given inputs and creating new outputs.
    * 
-   * Outputs are addresses (paired with a RVN amount, data or object specifying an asset operation) or data.
+   * Outputs are addresses (paired with a AVN amount, data or object specifying an asset operation) or data.
    * 
    * Returns hex-encoded raw transaction.
    * 
    * Note that the transaction's inputs are not signed, and it is not stored in the wallet or transmitted to the network.
    * 
-   * Paying for Asset Operations: Some operations require an amount of RVN to be sent to a burn address.
+   * Paying for Asset Operations: Some operations require an amount of AVN to be sent to a burn address.
    * 
-   * Paying for Asset Operations: Some operations require an amount of RVN to be sent to a burn address:
+   * Paying for Asset Operations: Some operations require an amount of AVN to be sent to a burn address:
    *
    * * Operation: Amount + Burn Address
    *   * transfer:                 0

@@ -896,7 +896,7 @@ export class Wallet {
   }
 
   /**
-   * Send an amount from a specific address to a given address. All rvn change will get sent back to the from_address
+   * Send an amount from a specific address to a given address. All avn change will get sent back to the from_address
    * @param params
    * @param {string} params.from_address The raven address to send from.
    * @param {string} params.to_address The raven address to send to.

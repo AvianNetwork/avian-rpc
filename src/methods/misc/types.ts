@@ -8,7 +8,7 @@ export type GetInfoResponse = {
   protocolversion: number;
   /** The wallet version */
   walletversion: number;
-  /** The total Ravencoin balance of the wallet */
+  /** The total Avian balance of the wallet */
   balance: number;
   /** The current number of blocks processed in the server */
   blocks: number;
@@ -155,7 +155,7 @@ export type GetAddressMempool = {
 export type GetAddressMempoolResponse = {
   /** The base58check encoded address */
   address: string;
-  /** The name of the associated asset (RVN for Ravencoin) */
+  /** The name of the associated asset (AVN for Avian) */
   assetName: string;
   /** The related txid */
   txid: string;
@@ -181,7 +181,7 @@ export type GetAddressUtxos = {
 export type GetAddressUtxosResponse = {
   /** The address base58check encoded */
   address: string;
-  /** The asset associated with the UTXOs (RVN for Ravencoin) */
+  /** The asset associated with the UTXOs (AVN for Avian) */
   assetName: string;
   /** The output txid */
   txid: string;
@@ -206,7 +206,7 @@ export type GetAddressDeltas = {
 
 /** GetAddressDeltasResponse */
 export type GetAddressDeltasResponse = {
-  /** The asset associated with the delta (RVN for Ravencoin) */
+  /** The asset associated with the delta (AVN for Avian) */
   assetName: string;
   /** The difference of satoshis */
   satoshis: number;
@@ -243,7 +243,7 @@ export type GetAddressBalanceResponse = {
 
 /** GetAddressBalanceResponseWithAsset */
 export type GetAddressBalanceResponseWithAsset = GetAddressBalanceResponse & {
-  /** The asset associated with the balance (RVN for Ravencoin) */
+  /** The asset associated with the balance (AVN for Avian) */
   assetName: string;
 };
 

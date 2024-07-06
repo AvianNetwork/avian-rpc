@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenite - Ravencoin RPC Home</title>
+  <title>Avian Network - Avian RPC Home</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -42,7 +42,7 @@
             
              
                 <a href="index.html">
-                    <h1 class="navbar-item">Ravenite (ravencoin-rpc)</h1>
+                    <h1 class="navbar-item">Avian Network (avian-rpc)</h1>
                 </a>
             
         </div>
@@ -60,7 +60,7 @@
                     
                         <a
                             class="link user-link "
-                            href="https://github.com/Ravenites/ravencoin-rpc"
+                            href="https://github.com/AvianNetwork/avian-rpc"
                         >
                             Github
                         </a>
@@ -113,23 +113,23 @@
 
 
     <section>
-        <article><p><img src="https://github.com/Ravenites/ravencoin-rpc/raw/main/media/repo-banner.png" alt="Ravencoin RPC Banner"></p>
-<h1>Ravenite - Ravencoin RPC</h1>
-<p><a href="https://ravenites.github.io/ravencoin-rpc/Client.html" target="_blank">Documentation Website</a></p>
-<p>A client library to connect to Ravencoin Core RPC in JavaScript.</p>
-<p><a href="https://www.npmjs.org/package/@ravenite/ravencoin-rpc"><img src="https://img.shields.io/npm/v/@ravenite/ravencoin-rpc.svg?style=flat-square" alt="NPM Package"></a></p>
-<p><strong>A Ravenite module for <a href="https://github.com/RavenProject/Ravencoin">ravencoin</a>.</strong></p>
+        <article><p><img src="https://github.com/AvianNetwork/avian-rpc/raw/main/media/repo-banner.png" alt="Avian RPC Banner"></p>
+<h1>Avian Network - Avian RPC</h1>
+<p><a href="https://ravenites.github.io/avian-rpc/Client.html" target="_blank">Documentation Website</a></p>
+<p>A client library to connect to Avian Core RPC in JavaScript.</p>
+<p><a href="https://www.npmjs.org/package/@aviannetwork/avian-rpc"><img src="https://img.shields.io/npm/v/@aviannetwork/avian-rpc.svg?style=flat-square" alt="NPM Package"></a></p>
+<p><strong>A Avian Network module for <a href="https://github.com/AvianNetwork/Avian">ravencoin</a>.</strong></p>
 <h2>Getting Started</h2>
 <pre class="prettyprint source lang-sh"><code># Using npm
-npm install @ravenite/ravencoin-rpc
+npm install @aviannetwork/avian-rpc
 
 # Using yarn
-yarn add @ravenite/ravencoin-rpc
+yarn add @aviannetwork/avian-rpc
 </code></pre>
 <h3>Usage</h3>
 <p>You can either write manually requests to your RPC connection via the <code>request</code> method, or you can use the built-in methods provided by the client class.</p>
 <h4>Manually</h4>
-<pre class="prettyprint source lang-javascript"><code>import { Client } from '@ravenite/ravencoin-rpc';
+<pre class="prettyprint source lang-javascript"><code>import { Client } from '@aviannetwork/avian-rpc';
 
 const client = new Client({
   url: 'http://127.0.0.1:9050',
@@ -142,7 +142,7 @@ client.request('getchaintips').then(response => {
 });
 </code></pre>
 <h4>Built-in Methods</h4>
-<pre class="prettyprint source lang-javascript"><code>import { Client } from '@ravenite/ravencoin-rpc';
+<pre class="prettyprint source lang-javascript"><code>import { Client } from '@aviannetwork/avian-rpc';
 
 const client = new Client({
   url: 'http://127.0.0.1:9050',
@@ -155,7 +155,7 @@ client.methods.listAssets().then(assets => {
 });
 </code></pre>
 <h2>Examples and Documentation</h2>
-<p>See <a href="https://ravenites.github.io/ravencoin-rpc/Client.html">documentation</a> for developer guides.</p>
+<p>See <a href="https://ravenites.github.io/avian-rpc/Client.html">documentation</a> for developer guides.</p>
 <h2>License</h2>
 <p>Code released under <a href="./LICENSE.md">the MIT license</a>.</p>
 <h3>Development</h3>

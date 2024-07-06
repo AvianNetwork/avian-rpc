@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenite - Ravencoin RPC methods/rewards/rewards.ts</title>
+  <title>Avian Network - Avian RPC methods/rewards/rewards.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -44,7 +44,7 @@
             
              
                 <a href="index.html">
-                    <h1 class="navbar-item">Ravenite (ravencoin-rpc)</h1>
+                    <h1 class="navbar-item">Avian Network (avian-rpc)</h1>
                 </a>
             
         </div>
@@ -62,7 +62,7 @@
                     
                         <a
                             class="link user-link "
-                            href="https://github.com/Ravenites/ravencoin-rpc"
+                            href="https://github.com/AvianNetwork/avian-rpc"
                         >
                             Github
                         </a>
@@ -98,7 +98,7 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>// https://github.com/RavenProject/Ravencoin/blob/master/src/rpc/rewards.cpp
+            <pre class="prettyprint source linenums"><code>// https://github.com/AvianNetwork/Avian/blob/master/src/rpc/rewards.cpp
 
 import { IClient } from '@/types';
 import {
@@ -201,7 +201,7 @@ export class Rewards {
    * @param params
    * @param {string}  params.asset_name                The reward will be distributed all owners of this asset
    * @param {number}  params.snapshot_height           The block height of the ownership snapshot
-   * @param {string}  params.distribution_asset_name   The name of the asset that will be distributed, or RVN
+   * @param {string}  params.distribution_asset_name   The name of the asset that will be distributed, or AVN
    * @param {number}  params.gross_distribution_amount The amount of the distribution asset that will be split amongst all owners
    * @param {string=} params.exception_addresses       Ownership addresses that should be excluded
    * @param {string=} params.change_address            If the rewards can't be fully distributed. The change will be sent to this address
@@ -238,7 +238,7 @@ export class Rewards {
    * @param params
    * @param {string}  parasm.asset_name                The reward will be distributed all owners of this asset\n"
    * @param {number}  parasm.snapshot_height           The block height of the ownership snapshot\n"
-   * @param {string}  parasm.distribution_asset_name   The name of the asset that will be distributed, or RVN\n"
+   * @param {string}  parasm.distribution_asset_name   The name of the asset that will be distributed, or AVN\n"
    * @param {number}  parasm.gross_distribution_amount The amount of the distribution asset that will be split amongst all owners\n"
    * @param {string=} parasm.exception_addresses       Ownership addresses that should be excluded\n"
    * @returns {Promise}

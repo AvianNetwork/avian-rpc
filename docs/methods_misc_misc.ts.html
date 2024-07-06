@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenite - Ravencoin RPC methods/misc/misc.ts</title>
+  <title>Avian Network - Avian RPC methods/misc/misc.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -44,7 +44,7 @@
             
              
                 <a href="index.html">
-                    <h1 class="navbar-item">Ravenite (ravencoin-rpc)</h1>
+                    <h1 class="navbar-item">Avian Network (avian-rpc)</h1>
                 </a>
             
         </div>
@@ -62,7 +62,7 @@
                     
                         <a
                             class="link user-link "
-                            href="https://github.com/Ravenites/ravencoin-rpc"
+                            href="https://github.com/AvianNetwork/avian-rpc"
                         >
                             Github
                         </a>
@@ -236,7 +236,7 @@ export class Misc {
    * @param params
    * @param {Array} params.addresses            Array of base58check encoded addresses
    * @param {boolean=} [params.chainInfo=false] Include chain info with results
-   * @param {string=} params.assetName          Get UTXOs for a particular asset instead of RVN ('*' for all assets).
+   * @param {string=} params.assetName          Get UTXOs for a particular asset instead of AVN ('*' for all assets).
    * @returns {Promise&lt;GetAddressUtxosResponse[]>}
    */
   getAddressUtxos(params: GetAddressUtxos): Promise&lt;GetAddressUtxosResponse[]> {
@@ -254,7 +254,7 @@ export class Misc {
    * @param {number} params.start      The start block height
    * @param {number} params.end        The end block height
    * @param {boolean} params.chainInfo Include chain info in results, only applies if start and end specified
-   * @param {string=} params.assetName Get deltas for a particular asset instead of RVN.
+   * @param {string=} params.assetName Get deltas for a particular asset instead of AVN.
    * @returns {Promise&lt;GetAddressDeltasResponse[]>}
    */
   getAddressDeltas(

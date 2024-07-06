@@ -3,7 +3,7 @@ sudo: false
 node_js:
 - '8'
 install:
-  - npm install @ravenite/ravencoin-rpc
+  - npm install @aviannetwork/avian-rpc
   - npm ci
 after_script:
   - gulp coveralls

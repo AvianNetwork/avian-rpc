@@ -145,7 +145,7 @@ export class Assets {
    * @param {string}  params.asset_name          A unique name.
    * @param {number=} [params.qty=1]             The number of units to be issued.
    * @param {string=} [params.to_address='']     Address asset will be sent to, if it is empty, address will be generated for you.
-   * @param {string=} [params.change_address=''] Address the the rvn change will be sent to, if it is empty, change address will be generated for you.
+   * @param {string=} [params.change_address=''] Address the the avn change will be sent to, if it is empty, change address will be generated for you.
    * @param {number=} [params.units=0]           Min = 0. Max = 8. The number of decimals precision for the asset (0 for whole units (\"1\"), 8 for max precision (\"1.00000000\").
    * @param {boolean=} [params.reissuable=true]  False for unique assets. Whether future reissuance is allowed.
    * @param {boolean=} [params.has_ipfs=false]   Whether ipfs hash is going to be added to the asset.
@@ -165,13 +165,13 @@ export class Assets {
    * 
    * If provided ipfs_hashes must be the same length as asset_tags.
    * 
-   * Five (5) RVN will be burned for each asset created.
+   * Five (5) AVN will be burned for each asset created.
    * @param {Object}  params
    * @param {string}  params.root_name           Name of the asset the unique asset(s) are being issued under
    * @param {array}   params.asset_tags          The unique tag for each asset which is to be issued
    * @param {array=}  params.ipfs_hashes         Ipfs hashes or txid hashes corresponding to each supplied tag (should be same size as \"asset_tags\")
    * @param {string=} [params.to_address='']     Address assets will be sent to, if it is empty, address will be generated for you
-   * @param {string=} [params.change_address=''] Address the the rvn change will be sent to, if it is empty, change address will be generated for you
+   * @param {string=} [params.change_address=''] Address the the avn change will be sent to, if it is empty, change address will be generated for you
    * @returns {Promise} txid
    */
   async issueUnique(params: IssueUnique): Promise&lt;string> {
@@ -241,7 +241,7 @@ export class Assets {
    * @param {string}  params.to_address                Address to send the asset to
    * @param {string=} params.message                   Once RIP5 is voted in ipfs hash or txid hash to send along with the transfer
    * @param {number=} params.expire_time               UTC timestamp of when the message expires
-   * @param {string=} [params.rvn_change_address='']   The transaction RVN change will be sent to this address
+   * @param {string=} [params.rvn_change_address='']   The transaction AVN change will be sent to this address
    * @param {string=} [params.asset_change_address=''] The transaction Asset change will be sent to this address
    * @returns {Promise} txid
    */
@@ -260,7 +260,7 @@ export class Assets {
    * @param {string}  params.to_address                Address to send the asset to
    * @param {string=} params.message                   Once RIP5 is voted in ipfs hash or txid hash to send along with the transfer
    * @param {number=} params.expire_time               UTC timestamp of when the message expires
-   * @param {string=} [params.rvn_change_address='']   The transactions RVN change will be sent to this address
+   * @param {string=} [params.rvn_change_address='']   The transactions AVN change will be sent to this address
    * @param {string=} [params.asset_change_address=''] The transactions Asset change will be sent to this address
    * @returns {Promise} txid or array of txid
    */
@@ -278,7 +278,7 @@ export class Assets {
    * @param {string}  params.to_address                Address to send the asset to
    * @param {string=} params.message                   Once RIP5 is voted in ipfs hash or txid hash to send along with the transfer
    * @param {number=} params.expire_time               UTC timestamp of when the message expires
-   * @param {string=} [params.change_address='']       The transactions RVN change will be sent to this address
+   * @param {string=} [params.change_address='']       The transactions AVN change will be sent to this address
    * @param {string=} [params.asset_change_address=''] The transactions Asset change will be sent to this address
    * @returns {Promise} txid or array of txid
    */
@@ -371,7 +371,7 @@ export class Assets {
    * @param {number}  params.qty                 The quantity of the asset to be issued
    * @param {string}  params.verifier            Tthe verifier string that will be evaluated when restricted asset transfers are made
    * @param {string}  params.to_address          Address asset will be sent to, this address must meet the verifier string requirements
-   * @param {string}  [params.change_address=''] Address that the rvn change will be sent to, if it is empty, change address will be generated for you
+   * @param {string}  [params.change_address=''] Address that the avn change will be sent to, if it is empty, change address will be generated for you
    * @param {number}  [params.units=0]           (min=0, max=8) The number of decimals precision for the asset (0 for whole units (\"1\"), 8 for max precision (\"1.00000000\")
    * @param {boolean} [params.reissuable=true]   (false for unique assets)) whether future reissuance is allowed
    * @param {boolean} [params.has_ipfs=false]    Whether an ipfs hash or txid hash is going to be added to the asset
@@ -398,7 +398,7 @@ export class Assets {
    * @param {string}  params.asset_name          A unique name
    * @param {string=} [params.qty=1]             The number of units to be issued
    * @param {string=} [params.to_address='']     Address asset will be sent to, if it is empty, address will be generated for you
-   * @param {string=} [params.change_address=''] Address the the rvn change will be sent to, if it is empty, change address will be generated for you
+   * @param {string=} [params.change_address=''] Address the the avn change will be sent to, if it is empty, change address will be generated for you
    * @param {string=} [params.has_ipfs=false]    Whether ipfs hash is going to be added to the asset
    * @param {string=} params.ipfs_hash           Required if has_ipfs is true. An ipfs hash or a txid hash once RIP5 is activated
    * @returns {Promise} txid
@@ -417,7 +417,7 @@ export class Assets {
    * @param {string}  params.to_address              Address asset will be sent to, this address must meet the verifier string requirements
    * @param {boolean} [params.change_verifier=false] If the verifier string will get changed
    * @param {string}  [params.new_verifier='']       The new verifier string that will be evaluated when restricted asset transfers are made
-   * @param {string}  [params.change_address='']     Address that the rvn change will be sent to, if it is empty, change address will be generated for you
+   * @param {string}  [params.change_address='']     Address that the avn change will be sent to, if it is empty, change address will be generated for you
    * @param {number}  [params.new_units=-1]          The new units that will be associated with the asset
    * @param {boolean} [params.reissuable=true]       False for unique assets. Whether future reissuance is allowed
    * @param {string}  [params.new_ipfs='']           Whether to update the current ipfs hash or txid once RIP5 is active
@@ -560,7 +560,7 @@ export class Assets {
   /**
    * Checks to see if an address has the given tag
    * @param params
-   * @param {string} params.address  The RVN address to search
+   * @param {string} params.address  The AVN address to search
    * @param {string} params.tag_name The tag to search
    * @returns {Promise} boolean - If the address has the tag
    */
@@ -571,7 +571,7 @@ export class Assets {
   /**
    * Checks to see if an address has been frozen by the given restricted asset
    * @param params
-   * @param {string} params.address         The RVN address to search
+   * @param {string} params.address         The AVN address to search
    * @param {string} params.restricted_name The restricted asset to search
    * @returns {Promise} boolean - If the address is frozen
    */

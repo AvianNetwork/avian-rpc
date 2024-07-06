@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenite - Ravencoin RPC methods/misc/types.ts</title>
+  <title>Avian Network - Avian RPC methods/misc/types.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -44,7 +44,7 @@
             
              
                 <a href="index.html">
-                    <h1 class="navbar-item">Ravenite (ravencoin-rpc)</h1>
+                    <h1 class="navbar-item">Avian Network (avian-rpc)</h1>
                 </a>
             
         </div>
@@ -62,7 +62,7 @@
                     
                         <a
                             class="link user-link "
-                            href="https://github.com/Ravenites/ravencoin-rpc"
+                            href="https://github.com/AvianNetwork/avian-rpc"
                         >
                             Github
                         </a>
@@ -108,7 +108,7 @@ export type GetInfoResponse = {
   protocolversion: number;
   /** The wallet version */
   walletversion: number;
-  /** The total Ravencoin balance of the wallet */
+  /** The total Avian balance of the wallet */
   balance: number;
   /** The current number of blocks processed in the server */
   blocks: number;
@@ -255,7 +255,7 @@ export type GetAddressMempool = {
 export type GetAddressMempoolResponse = {
   /** The base58check encoded address */
   address: string;
-  /** The name of the associated asset (RVN for Ravencoin) */
+  /** The name of the associated asset (AVN for Avian) */
   assetName: string;
   /** The related txid */
   txid: string;
@@ -281,7 +281,7 @@ export type GetAddressUtxos = {
 export type GetAddressUtxosResponse = {
   /** The address base58check encoded */
   address: string;
-  /** The asset associated with the UTXOs (RVN for Ravencoin) */
+  /** The asset associated with the UTXOs (AVN for Avian) */
   assetName: string;
   /** The output txid */
   txid: string;
@@ -306,7 +306,7 @@ export type GetAddressDeltas = {
 
 /** GetAddressDeltasResponse */
 export type GetAddressDeltasResponse = {
-  /** The asset associated with the delta (RVN for Ravencoin) */
+  /** The asset associated with the delta (AVN for Avian) */
   assetName: string;
   /** The difference of satoshis */
   satoshis: number;
@@ -343,7 +343,7 @@ export type GetAddressBalanceResponse = {
 
 /** GetAddressBalanceResponseWithAsset */
 export type GetAddressBalanceResponseWithAsset = GetAddressBalanceResponse &amp; {
-  /** The asset associated with the balance (RVN for Ravencoin) */
+  /** The asset associated with the balance (AVN for Avian) */
   assetName: string;
 };
 

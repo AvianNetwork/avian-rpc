@@ -1,23 +1,23 @@
-![Ravencoin RPC Banner](https://github.com/Ravenites/ravencoin-rpc/raw/main/media/repo-banner.png)
+![Avian RPC Banner](https://github.com/AvianNetwork/avian-rpc/raw/main/media/repo-banner.png)
 
-# Ravenite - Ravencoin RPC
+# Avian Network - Avian RPC
 
-<a href="https://ravenites.github.io/ravencoin-rpc/Client.html" target="_blank">Documentation Website</a>
+<a href="https://aviannetwork.github.io/avian-rpc/Client.html" target="_blank">Documentation Website</a>
 
-A client library to connect to Ravencoin Core RPC in JavaScript.
+A client library to connect to Avian Core RPC in JavaScript.
 
 [![NPM Package](https://img.shields.io/npm/v/@ravenite/ravencoin-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@ravenite/ravencoin-rpc)
 
-**A Ravenite module for [ravencoin](https://github.com/RavenProject/Ravencoin).**
+**An Avian module for [avian](https://github.com/AvianNetwork/Avian).**
 
 ## Getting Started
 
 ```sh
 # Using npm
-npm install @ravenite/ravencoin-rpc
+npm install @aviannetwork/avian-rpc
 
 # Using yarn
-yarn add @ravenite/ravencoin-rpc
+yarn add @aviannetwork/avian-rpc
 ```
 
 ### Usage
@@ -27,10 +27,10 @@ You can either write manually requests to your RPC connection via the `request` 
 #### Manually
 
 ```javascript
-import { Client } from '@ravenite/ravencoin-rpc';
+import { Client } from '@aviannetwork/avian-rpc';
 
 const client = new Client({
-  url: 'http://127.0.0.1:9050',
+  url: 'http://127.0.0.1:7896',
   username: 'username',
   password: 'password',
 });
@@ -43,10 +43,10 @@ client.request('getchaintips').then(response => {
 #### Built-in Methods
 
 ```javascript
-import { Client } from '@ravenite/ravencoin-rpc';
+import { Client } from '@aviannetwork/avian-rpc';
 
 const client = new Client({
-  url: 'http://127.0.0.1:9050',
+  url: 'http://127.0.0.1:7896',
   username: 'username',
   password: 'password',
 });
@@ -58,7 +58,7 @@ client.methods.listAssets().then(assets => {
 
 ## Examples and Documentation
 
-See [documentation](https://ravenites.github.io/ravencoin-rpc/Client.html) for developer guides.
+See [documentation](https://aviannetwork.github.io/avian-rpc/Client.html) for developer guides.
 
 ## License
 
@@ -66,4 +66,4 @@ Code released under [the MIT license](./LICENSE.md).
 
 ### Development
 
-Some RPC commands within Ravencore have known bugs. You may experience them as a result. If you find that the issue comes from this library, please create an Issue so that it can be resolved quickly.
+Some RPC commands within Avian have known bugs. You may experience them as a result. If you find that the issue comes from this library, please create an Issue so that it can be resolved quickly.

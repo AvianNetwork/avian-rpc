@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenite - Ravencoin RPC methods/raw-transactions/raw-transactions.ts</title>
+  <title>Avian Network - Avian RPC methods/raw-transactions/raw-transactions.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -44,7 +44,7 @@
             
              
                 <a href="index.html">
-                    <h1 class="navbar-item">Ravenite (ravencoin-rpc)</h1>
+                    <h1 class="navbar-item">Avian Network (avian-rpc)</h1>
                 </a>
             
         </div>
@@ -62,7 +62,7 @@
                     
                         <a
                             class="link user-link "
-                            href="https://github.com/Ravenites/ravencoin-rpc"
+                            href="https://github.com/AvianNetwork/avian-rpc"
                         >
                             Github
                         </a>
@@ -98,7 +98,7 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>// https://github.com/RavenProject/Ravencoin/blob/master/src/rpc/rawtransaction.cpp
+            <pre class="prettyprint source linenums"><code>// https://github.com/AvianNetwork/Avian/blob/master/src/rpc/rawtransaction.cpp
 
 import { IClient } from '@/types';
 import {
@@ -159,15 +159,15 @@ export class RawTransactions {
   /**
    * Create a transaction spending the given inputs and creating new outputs.
    * 
-   * Outputs are addresses (paired with a RVN amount, data or object specifying an asset operation) or data.
+   * Outputs are addresses (paired with a AVN amount, data or object specifying an asset operation) or data.
    * 
    * Returns hex-encoded raw transaction.
    * 
    * Note that the transaction's inputs are not signed, and it is not stored in the wallet or transmitted to the network.
    * 
-   * Paying for Asset Operations: Some operations require an amount of RVN to be sent to a burn address.
+   * Paying for Asset Operations: Some operations require an amount of AVN to be sent to a burn address.
    * 
-   * Paying for Asset Operations: Some operations require an amount of RVN to be sent to a burn address:
+   * Paying for Asset Operations: Some operations require an amount of AVN to be sent to a burn address:
    *
    * * Operation: Amount + Burn Address
    *   * transfer:                 0

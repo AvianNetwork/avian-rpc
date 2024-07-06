@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenite - Ravencoin RPC index.ts</title>
+  <title>Avian Network - Avian RPC index.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -44,7 +44,7 @@
             
              
                 <a href="index.html">
-                    <h1 class="navbar-item">Ravenite (ravencoin-rpc)</h1>
+                    <h1 class="navbar-item">Avian Network (avian-rpc)</h1>
                 </a>
             
         </div>
@@ -62,7 +62,7 @@
                     
                         <a
                             class="link user-link "
-                            href="https://github.com/Ravenites/ravencoin-rpc"
+                            href="https://github.com/AvianNetwork/avian-rpc"
                         >
                             Github
                         </a>
@@ -113,7 +113,7 @@ import { Config, IClient, Options, RpcError } from './types';
 import axios, { Axios } from 'axios';
 
 /**
- * Create a RPC Client to connect to a Ravencoin node.
+ * Create a RPC Client to connect to a Avian node.
  * @class Client
  * @category Client
  * @param config
@@ -122,7 +122,7 @@ import axios, { Axios } from 'axios';
  * @param {string} config.password RPC password
  * @param {Objct=} config.httpOptions HTTP options object of values to add to request headers
  * @example
- *  import Client from '@ravenite/ravencoin-rpc';
+ *  import Client from '@aviannetwork/avian-rpc';
 
 const client = new Client({
   url: 'http://127.0.0.1:9050',

@@ -19,13 +19,13 @@
     "useLongnameInNav": false,
     "showInheritedInNav": true,
     "better-docs": {
-      "name": "Ravenite (ravencoin-rpc)",
-      "title": "Ravenite - Ravencoin RPC",
+      "name": "Avian Network (avian-rpc)",
+      "title": "Avian Network - Avian RPC",
       "hideGenerator": true,
       "navLinks": [
         {
           "label": "Github",
-          "href": "https://github.com/Ravenites/ravencoin-rpc"
+          "href": "https://github.com/AvianNetwork/avian-rpc"
         }
       ]
     }
