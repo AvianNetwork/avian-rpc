@@ -58,9 +58,9 @@ export class Misc {
   }
 
   /**
-   * Return information about the given raven address.
+   * Return information about the given avian address.
    * @param params
-   * @param {string} params.address The raven address to validate
+   * @param {string} params.address The avian address to validate
    * @returns {Promise<ValidateAddressResponse>}
    */
   validateAddress({
@@ -73,7 +73,7 @@ export class Misc {
    * Creates a multi-signature address with n signature of m keys required.
    * @param params
    * @param {number} params.nrequired The number of required signatures out of the n keys or addresses.
-   * @param {string} params.keys      A json array of keys which are raven addresses or hex-encoded public keys
+   * @param {string} params.keys      A json array of keys which are avian addresses or hex-encoded public keys
    * @returns {Promise<CreateMultisigResponse>} An object with the address and redeemScript
    */
   createMultisig({
@@ -87,7 +87,7 @@ export class Misc {
   /**
    * Verify a signed message
    * @param params
-   * @param {string} params.address   The raven address to use for the signature.
+   * @param {string} params.address   The avian address to use for the signature.
    * @param {string} params.signature The signature provided by the signer in base 64 encoding (see signmessage).
    * @param {string} params.message   The message that was signed.
    * @returns {Promise<boolean>} If the signature is verified or not.
@@ -216,7 +216,7 @@ export class Misc {
   /**
    * Simply echo back the input arguments. This command is for testing.
    *
-   * The difference between echo and echojson is that echojson has argument conversion enabled in the client-side table in raven-cli and the GUI.
+   * The difference between echo and echojson is that echojson has argument conversion enabled in the client-side table in avian-cli and the GUI.
    *
    * There is no server-side difference.
    * @returns {Promise<unknown>}
@@ -228,7 +228,7 @@ export class Misc {
   /**
    * Simply echo back the input arguments. This command is for testing.
    *
-   * The difference between echo and echojson is that echojson has argument conversion enabled in the client-side table in raven-cli and the GUI.
+   * The difference between echo and echojson is that echojson has argument conversion enabled in the client-side table in avian-cli and the GUI.
    *
    * There is no server-side difference.
    * @returns {Promise<unknown>}

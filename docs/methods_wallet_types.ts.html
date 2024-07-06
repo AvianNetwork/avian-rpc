@@ -106,7 +106,7 @@ export type FundRawTransaction = {
 
 /** FundRawTransactionOptions */
 export type FundRawTransactionOptions = {
-  /** Default pool address. The raven address to receive the change */
+  /** Default pool address. The avian address to receive the change */
   changeAddress?: string;
   /** Default random. The index of the change output */
   changePosition?: number;
@@ -119,7 +119,7 @@ export type FundRawTransactionOptions = {
   /** A json array of integers.
    * The fee will be equally deducted from the amount of each specified output.
    * The outputs are specified by their zero-based index, before any change output is added.
-   * Those recipients will receive less ravens than you enter in their corresponding amount field.
+   * Those recipients will receive less avians than you enter in their corresponding amount field.
    * If no outputs are specified here, the sender pays the fee.
    * [vout_index,...]
    */
@@ -231,7 +231,7 @@ export type GetAccountAddress = { account: string };
 
 /** GetAccountAddressResponse */
 export type GetAccountAddressResponse = {
-  /** The account raven address */
+  /** The account avian address */
   address: string;
 };
 
@@ -290,7 +290,7 @@ export type GetNewAddress = { account?: string };
 
 /** GetNewAddressResponse */
 export type GetNewAddressResponse = {
-  /** The new raven address */
+  /** The new avian address */
   address: string;
 };
 
@@ -354,7 +354,7 @@ export type GetTransactionResponse = {
 type GetTransactionResponseDetails = {
   /** DEPRECATED. The account name involved in the transaction, can be \"\" for the default account. */
   account?: string;
-  /** The raven address involved in the transaction */
+  /** The avian address involved in the transaction */
   address: string;
   /** The category, either 'send' or 'receive' */
   category: string;
@@ -378,7 +378,7 @@ type GetTransactionResponseAssetDetails = {
   asset_name: string;
   /** The amount in " + CURRENCY_UNIT + " */
   amount: number;
-  /** The raven address involved in the transaction */
+  /** The avian address involved in the transaction */
   address: string;
   /** The vout value */
   vout: number;
@@ -502,7 +502,7 @@ export type ListAccountsResponse = {
 
 /** ListAddressGroupingsResponse */
 export type ListAddressGroupingsResponse = {
-  /** The raven address and the amount in " + CURRENCY_UNIT + " OR DEPRECATED. The account */
+  /** The avian address and the amount in " + CURRENCY_UNIT + " OR DEPRECATED. The account */
   [key: string]: number | string;
 };
 
@@ -581,7 +581,7 @@ export type ListSinceBlockResponse = {
 type ListSinceBlockResponseTransaction = {
   /** DEPRECATED. The account name associated with the transaction. Will be \"\" for the default account. */
   account?: string;
-  /** The raven address of the transaction. Not present for move transactions (category = move). */
+  /** The avian address of the transaction. Not present for move transactions (category = move). */
   address: string;
   /** The transaction category. 'send' has negative amounts, 'receive' has positive amounts. */
   category: string;
@@ -629,7 +629,7 @@ export type ListTransactions = {
 export type ListTransactionsResponse = {
   /** DEPRECATED. The account name associated with the transaction. It will be \"\" for the default account. */
   account?: string;
-  /** The raven address of the transaction. Not present for move transactions (category = move). */
+  /** The avian address of the transaction. Not present for move transactions (category = move). */
   address: string;
   /** The transaction category. 'move' is a local (off blockchain) Transaction between accounts, and not associated with an address, transaction id or block. 'send' and 'receive' transactions are associated with an address, transaction id and block details */
   category: string;
@@ -694,7 +694,7 @@ export type ListUnspentResponse = {
   txid: string;
   /** The vout value */
   vout: number;
-  /** The raven address */
+  /** The avian address */
   address: string;
   /** DEPRECATED. The associated account, or \"\" for the default account */
   account?: string;

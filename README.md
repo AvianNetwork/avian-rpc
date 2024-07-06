@@ -6,7 +6,7 @@
 
 A client library to connect to Avian Core RPC in JavaScript.
 
-[![NPM Package](https://img.shields.io/npm/v/@ravenite/ravencoin-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@ravenite/ravencoin-rpc)
+[![NPM Package](https://img.shields.io/npm/v/@aviannetwork/avian-rpc.svg?style=flat-square)](https://www.npmjs.org/package/@aviannetwork/avian-rpc)
 
 **An Avian module for [avian](https://github.com/AvianNetwork/Avian).**
 

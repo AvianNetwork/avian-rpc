@@ -411,7 +411,7 @@ type GetTxOutResponseScriptPubKey = {
   reqSigs: number;
   /** The type, eg pubkeyhash */
   type: string;
-  /** Array of raven addresses */
+  /** Array of avian addresses */
   addresses: string[];
 };
 

@@ -171,7 +171,7 @@ export class Assets {
    * @example
    * client.assets.listAssetBalancesByAddress({ address: 'mwc5mCPAMWG2cVbvxG3dSqxKbxeLR1UMtu', onlytotal: true });
    * @param params
-   * @param {string}   [params.address]         A raven address
+   * @param {string}   [params.address]         A avian address
    * @param {boolean=} [params.onlytotal=false] When false result is just a list of assets balances -- when true the result is just a single number representing the number of assets
    * @param {number=}  [params.count=50000]     Truncates results to include only the first _count_ assets found (MAX=50000)
    * @param {number=}  [params.start=0]         Results skip over the first _start_ assets found (if negative it skips back from the end)

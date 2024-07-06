@@ -24,7 +24,7 @@ export type GetMiningInfoResponse = {
   chain: string;
   /** any network and blockchain warnings */
   warnings: string;
-  /** DEPRECATED. Same as warnings. Only shown when ravend is started with -deprecatedrpc=getmininginfo */
+  /** DEPRECATED. Same as warnings. Only shown when aviand is started with -deprecatedrpc=getmininginfo */
   errors?: string;
 };
 

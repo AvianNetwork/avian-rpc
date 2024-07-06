@@ -192,10 +192,10 @@ export class Mining {
    * It returns data needed to construct a block to work on.
    *
    * For full specification, see BIPs 22, 23, 9, and 145:
-   *  * https://github.com/raven/bips/blob/master/bip-0022.mediawiki
-   *  * https://github.com/raven/bips/blob/master/bip-0023.mediawiki
-   *  * https://github.com/raven/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes
-   *  * https://github.com/raven/bips/blob/master/bip-0145.mediawiki
+   *  * https://github.com/avian/bips/blob/master/bip-0022.mediawiki
+   *  * https://github.com/avian/bips/blob/master/bip-0023.mediawiki
+   *  * https://github.com/avian/bips/blob/master/bip-0009.mediawiki#getblocktemplate_changes
+   *  * https://github.com/avian/bips/blob/master/bip-0145.mediawiki
    * @example
    * client.mining.getBlockTemplate()
    * @param params
@@ -298,7 +298,7 @@ export class Mining {
    * Mine blocks immediately to a specified address (before the RPC call returns)
    * @param params
    * @param {number} params.nblocks How many blocks are generated immediately.
-   * @param {string} params.address The address to send the newly generated raven to.
+   * @param {string} params.address The address to send the newly generated avian to.
    * @param {number=} params.maxtries How many iterations to try (default = 1000000).
    * @returns {Promise&lt;string[]>} Array of hashes of blocks generated
    */

@@ -170,12 +170,12 @@ export class Wallet {
   /**
    * Add a nrequired-to-sign multisignature address to the wallet.
    *
-   * Each key is a Raven address or hex-encoded public key.
+   * Each key is a Avian address or hex-encoded public key.
    *
    * If 'account' is specified (DEPRECATED), assign address to that account.
    * @param params
    * @param {number} params.nrequired The number of required signatures out of the n keys or addresses.
-   * @param {Array} params.keys A json array of raven addresses or hex-encoded public keys
+   * @param {Array} params.keys A json array of avian addresses or hex-encoded public keys
    * @param {string=} params.account DEPRECATED. An account to assign the addresses to.
    * @returns {Promise<AddMultisigAddressResponse>}
    */
@@ -248,7 +248,7 @@ export class Wallet {
    *
    * Then the importprivkey can be used with this output.
    * @param params
-   * @param {string} params.address The raven address for the private key
+   * @param {string} params.address The avian address for the private key
    * @returns {Promise<DumpPrivKeyResponse>} The private key
    */
   dumpPrivKey({ address }: DumpPrivKey): Promise<DumpPrivKeyResponse> {
@@ -258,7 +258,7 @@ export class Wallet {
   /**
    * Dumps all wallet keys in a human-readable format to a server-side file. This does not allow overwriting existing files.
    * @param params
-   * @param {string} params.filename The filename with path (either absolute or relative to ravend)
+   * @param {string} params.filename The filename with path (either absolute or relative to aviand)
    * @returns {Promise<DumpWalletResponse>} The filename with full absolute path
    */
   dumpWallet({ filename }: DumpWallet): Promise<DumpWalletResponse> {
@@ -277,18 +277,18 @@ export class Wallet {
    * Note that this will shutdown the server.
    * @param params
    * @param {string} params.passphrase The pass phrase to encrypt the wallet with. It must be at least 1 character, but should be long.
-   * @returns {Promise<string>} Wallet encrypted; Raven server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.
+   * @returns {Promise<string>} Wallet encrypted; Avian server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.
    */
   encryptWallet({ passphrase }: EncryptWallet): Promise<string> {
     return this._client.request('encryptwallet', [passphrase]);
   }
 
   /**
-   * DEPRECATED. Returns the current Raven address for receiving payments to this account.
+   * DEPRECATED. Returns the current Avian address for receiving payments to this account.
    * @deprecated
    * @param params
    * @param {string} params.account The account name for the address. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.
-   * @returns {Promise<GetAccountAddressResponse>} The account raven address
+   * @returns {Promise<GetAccountAddressResponse>} The account avian address
    */
   getAccountAddress({
     account,
@@ -300,7 +300,7 @@ export class Wallet {
    * DEPRECATED. Returns the account associated with the given address.
    * @deprecated
    * @param params
-   * @param {string} params.address The raven address for account lookup.
+   * @param {string} params.address The avian address for account lookup.
    * @returns {Promise<GetAccountResponse>} The account address
    */
   getAccount({ address }: GetAccount): Promise<GetAccountResponse> {
@@ -312,7 +312,7 @@ export class Wallet {
    * @deprecated
    * @param params
    * @param {string} params.account The account name.
-   * @returns {Promise<GetAddressesByAccountResponse>} A raven address associated with the given account
+   * @returns {Promise<GetAddressesByAccountResponse>} A avian address associated with the given account
    */
   getAddressesByAccount({
     account,
@@ -371,12 +371,12 @@ export class Wallet {
   }
 
   /**
-   * eturns a new Raven address for receiving payments.
+   * eturns a new Avian address for receiving payments.
    *
    * If 'account' is specified (DEPRECATED), it is added to the address book so payments received with the address will be credited to 'account'.
    * @param params
    * @param {string=} params.account DEPRECATED. The account name for the address to be linked to. If not provided, the default account \"\" is used. It can also be set to the empty string \"\" to represent the default account. The account does not need to exist, it will be created if there is no account by the given name.
-   * @returns {Promise<GetNewAddressResponse>} The new raven address
+   * @returns {Promise<GetNewAddressResponse>} The new avian address
    */
   getNewAddress({ account }: GetNewAddress): Promise<GetNewAddressResponse> {
     const data = account ? [account] : [];
@@ -384,7 +384,7 @@ export class Wallet {
   }
 
   /**
-   * Returns a new Raven address, for receiving change.
+   * Returns a new Avian address, for receiving change.
    *
    * This is for use with raw transactions, NOT normal use.
    * @returns {Promise<GetRawChangeAddressResponse>} The address
@@ -412,7 +412,7 @@ export class Wallet {
   /**
    * Returns the total amount received by the given address in transactions with at least minconf confirmations.
    * @param params
-   * @param {string} params.address The raven address for transactions.
+   * @param {string} params.address The avian address for transactions.
    * @param {number=} [params.minconf=1] Default = 1. Only include transactions confirmed at least this many times.
    * @returns {Promise<GetReceivedByAddressResponse>} The total amount in " + CURRENCY_UNIT + " received at this address.
    */
@@ -714,7 +714,7 @@ export class Wallet {
    * @param params
    * @param {number=} [params.minconf=1] The minimum confirmations to filter
    * @param {number=} [params.maxconf=9999999] The maximum confirmations to filter
-   * @param {Array} params.addresses An array of raven addresses to filter
+   * @param {Array} params.addresses An array of avian addresses to filter
    * @param {boolean=} [params.include_unsafe=true] Include outputs that are not safe to spend. See description of \"safe\" attribute below.
    * @param {ListUnspentQueryOptions=} [params.query_options=true] JSON with query options
    * @returns {Promise<ListUnspentResponse[]>}
@@ -753,7 +753,7 @@ export class Wallet {
    *
    * If no transaction outputs are specified when unlocking then all current locked transaction outputs are unlocked.
    *
-   * A locked transaction output will not be chosen by automatic coin selection, when spending ravens.
+   * A locked transaction output will not be chosen by automatic coin selection, when spending avians.
    *
    * Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list is always cleared (by virtue of process exit) when a node stops or fails.
    * @param params
@@ -792,11 +792,11 @@ export class Wallet {
   }
 
   /**
-   * DEPRECATED (use sendtoaddress). Sent an amount from an account to a raven address.
+   * DEPRECATED (use sendtoaddress). Sent an amount from an account to a avian address.
    * @deprecated
    * @param params
    * @param {string} params.fromaccount The name of the account to send funds from. May be the default account using "". Specifying an account does not influence coin selection, but it does associate the newly created transaction with the account, so the account's balance computation and transaction history can reflect the spend.
-   * @param {string} params.toaddress The raven address to send funds to.
+   * @param {string} params.toaddress The avian address to send funds to.
    * @param {(string|number)} params.amount The amount in " + CURRENCY_UNIT + " (transaction fee is added on top).
    * @param {number=} [params.minconf=1] Only use funds with at least this many confirmations.
    * @param {string=} params.comment A comment used to store what the transaction is for. This is not part of the transaction, just kept in your wallet.
@@ -826,10 +826,10 @@ export class Wallet {
    * Send multiple times. Amounts are double-precision floating point numbers.
    * @param params
    * @param {string} params.fromaccount DEPRECATED. The account to send the funds from. Should be \"\" for the default account
-   * @param {string} params.amounts A json object with addresses and amounts. "address":amount  (numeric or string) The raven address is the key, the numeric amount (can be string) in " + CURRENCY_UNIT + " is the value
+   * @param {string} params.amounts A json object with addresses and amounts. "address":amount  (numeric or string) The avian address is the key, the numeric amount (can be string) in " + CURRENCY_UNIT + " is the value
    * @param {number=} [params.minconf=1] Default = 1. Only use the balance confirmed at least this many times.
    * @param {string=} params.comment A comment
-   * @param {Array=} params.subtractfeefrom A json array with addresses. The fee will be equally deducted from the amount of each selected address. Those recipients will receive less ravens than you enter in their corresponding amount field. If no addresses are specified here, the sender pays the fee. Subtract fee from listed addresses.
+   * @param {Array=} params.subtractfeefrom A json array with addresses. The fee will be equally deducted from the amount of each selected address. Those recipients will receive less avians than you enter in their corresponding amount field. If no addresses are specified here, the sender pays the fee. Subtract fee from listed addresses.
    * @param {number=} params.conf_target Confirmation target (in blocks)
    * @param {string=} [params.estimate_mode=UNSET] Default = UNSET. The fee estimate mode, must be one of: "UNSET", "ECONOMICAL", "CONSERVATIVE"
    * @returns {Promise<string>} The transaction id for the send. Only 1 transaction is created regardless of the number of addresses.
@@ -860,11 +860,11 @@ export class Wallet {
   /**
    * Send an amount to a given address.
    * @param params
-   * @param {string} params.address The raven address to send to.
+   * @param {string} params.address The avian address to send to.
    * @param {(string|number)} params.amount The amount in " + CURRENCY_UNIT + " to send. eg 0.1
    * @param {string=} params.comment A comment used to store what the transaction is for. This is not part of the transaction, just kept in your wallet.
    * @param {string=} params.comment_to A comment to store the name of the person or organization to which you're sending the transaction. This is not part of the transaction, just kept in your wallet.
-   * @param {boolean=} [params.subtractfeefromamount=false] Default = false. The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field.
+   * @param {boolean=} [params.subtractfeefromamount=false] Default = false. The fee will be deducted from the amount being sent. The recipient will receive less avians than you enter in the amount field.
    * @param {number=} params.conf_target Confirmation target (in blocks)
    * @param {string} params.estimate_mode Default = UNSET. The fee estimate mode, must be one of: "UNSET", "ECONOMICAL", "CONSERVATIVE"
    * @returns {Promise<string>} The transaction id.
@@ -898,12 +898,12 @@ export class Wallet {
   /**
    * Send an amount from a specific address to a given address. All avn change will get sent back to the from_address
    * @param params
-   * @param {string} params.from_address The raven address to send from.
-   * @param {string} params.to_address The raven address to send to.
+   * @param {string} params.from_address The avian address to send from.
+   * @param {string} params.to_address The avian address to send to.
    * @param {(string|number)} params.amount The amount in " + CURRENCY_UNIT + " to send. eg 0.1
    * @param {string=} params.comment A comment used to store what the transaction is for. This is not part of the transaction, just kept in your wallet.
    * @param {string=} params.comment_to A comment to store the name of the person or organization to which you're sending the transaction. This is not part of the transaction, just kept in your wallet.
-   * @param {boolean=} [params.subtractfeefromamount=false]  (boolean, optional, default=false) The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field.
+   * @param {boolean=} [params.subtractfeefromamount=false]  (boolean, optional, default=false) The fee will be deducted from the amount being sent. The recipient will receive less avians than you enter in the amount field.
    * @param {number=} params.conf_target Confirmation target (in blocks)
    * @param {string=} [params.estimate_mode=UNSET] Default = UNSET. The fee estimate mode, must be one of: UNSET, ECONOMICAL, CONSERVATIVE
    * @returns {Promise<string>} The transaction id.
@@ -941,7 +941,7 @@ export class Wallet {
    * DEPRECATED. Sets the account associated with the given address.
    * @deprecated
    * @param params
-   * @param {string} params.address The raven address to be associated with an account.
+   * @param {string} params.address The avian address to be associated with an account.
    * @param {string} params.account The account to assign the address to.
    * @returns {Promise<null>}
    */
@@ -963,7 +963,7 @@ export class Wallet {
   /**
    * Sign a message with the private key of an address
    * @param params
-   * @param {string} params.address The raven address to use for the private key.
+   * @param {string} params.address The avian address to use for the private key.
    * @param {string} params.message The message to create a signature of.
    * @returns {Promise<string>} The signature of the message encoded in base 64
    */
@@ -1000,7 +1000,7 @@ export class Wallet {
   /**
    * Stores the wallet decryption key in memory for 'timeout' seconds.
    *
-   * This is needed prior to performing transactions related to private keys such as sending ravens
+   * This is needed prior to performing transactions related to private keys such as sending avians
    *
    * Issuing the walletpassphrase command while the wallet is already unlocked will set a new unlock time that overrides the old one.
    * @example

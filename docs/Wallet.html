@@ -565,7 +565,7 @@
     
     <div class="description">
         <p>Add a nrequired-to-sign multisignature address to the wallet.</p>
-<p>Each key is a Raven address or hex-encoded public key.</p>
+<p>Each key is a Avian address or hex-encoded public key.</p>
 <p>If 'account' is specified (DEPRECATED), assign address to that account.</p>
     </div>
     
@@ -688,7 +688,7 @@
 
   
 
-  <td class="description last"><p>A json array of raven addresses or hex-encoded public keys</p></td>
+  <td class="description last"><p>A json array of avian addresses or hex-encoded public keys</p></td>
 </tr>
 
   
@@ -1553,7 +1553,7 @@
 
   
 
-  <td class="description last"><p>The raven address for the private key</p></td>
+  <td class="description last"><p>The avian address for the private key</p></td>
 </tr>
 
   
@@ -1747,7 +1747,7 @@
 
   
 
-  <td class="description last"><p>The filename with path (either absolute or relative to ravend)</p></td>
+  <td class="description last"><p>The filename with path (either absolute or relative to aviand)</p></td>
 </tr>
 
   
@@ -2026,7 +2026,7 @@
 
 <div class="columns">
     
-    <div class='param-desc column is-7'><p>Wallet encrypted; Raven server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.</p></div>
+    <div class='param-desc column is-7'><p>Wallet encrypted; Avian server stopping, restart to run with encrypted wallet. The keypool has been flushed and a new HD seed was generated (if you are using HD). You need to make a new backup.</p></div>
     
     
     <div class='column is-5 has-text-left'>
@@ -2635,7 +2635,7 @@
 
   
 
-  <td class="description last"><p>The raven address for account lookup.</p></td>
+  <td class="description last"><p>The avian address for account lookup.</p></td>
 </tr>
 
   
@@ -2758,7 +2758,7 @@
     
     
     <div class="description">
-        <p>DEPRECATED. Returns the current Raven address for receiving payments to this account.</p>
+        <p>DEPRECATED. Returns the current Avian address for receiving payments to this account.</p>
     </div>
     
 
@@ -2914,7 +2914,7 @@
 
 <div class="columns">
     
-    <div class='param-desc column is-7'><p>The account raven address</p></div>
+    <div class='param-desc column is-7'><p>The account avian address</p></div>
     
     
     <div class='column is-5 has-text-left'>
@@ -3110,7 +3110,7 @@
 
 <div class="columns">
     
-    <div class='param-desc column is-7'><p>A raven address associated with the given account</p></div>
+    <div class='param-desc column is-7'><p>A avian address associated with the given account</p></div>
     
     
     <div class='column is-5 has-text-left'>
@@ -3707,7 +3707,7 @@ avoid passing this argument.</p></td>
     
     
     <div class="description">
-        <p>eturns a new Raven address for receiving payments.</p>
+        <p>eturns a new Avian address for receiving payments.</p>
 <p>If 'account' is specified (DEPRECATED), it is added to the address book so payments received with the address will be credited to 'account'.</p>
     </div>
     
@@ -3882,7 +3882,7 @@ avoid passing this argument.</p></td>
 
 <div class="columns">
     
-    <div class='param-desc column is-7'><p>The new raven address</p></div>
+    <div class='param-desc column is-7'><p>The new avian address</p></div>
     
     
     <div class='column is-5 has-text-left'>
@@ -3922,7 +3922,7 @@ avoid passing this argument.</p></td>
     
     
     <div class="description">
-        <p>Returns a new Raven address, for receiving change.</p>
+        <p>Returns a new Avian address, for receiving change.</p>
 <p>This is for use with raw transactions, NOT normal use.</p>
     </div>
     
@@ -4409,7 +4409,7 @@ avoid passing this argument.</p></td>
       </td>
   
 
-  <td class="description last"><p>The raven address for transactions.</p></td>
+  <td class="description last"><p>The avian address for transactions.</p></td>
 </tr>
 
   
@@ -8890,7 +8890,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>An array of raven addresses to filter</p></td>
+  <td class="description last"><p>An array of avian addresses to filter</p></td>
 </tr>
 
   
@@ -9213,7 +9213,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
         <p>Updates list of temporarily unspendable outputs.</p>
 <p>Temporarily lock (unlock=false) or unlock (unlock=true) specified transaction outputs.</p>
 <p>If no transaction outputs are specified when unlocking then all current locked transaction outputs are unlocked.</p>
-<p>A locked transaction output will not be chosen by automatic coin selection, when spending ravens.</p>
+<p>A locked transaction output will not be chosen by automatic coin selection, when spending avians.</p>
 <p>Locks are stored in memory only. Nodes start with zero locked outputs, and the locked output list is always cleared (by virtue of process exit) when a node stops or fails.</p>
     </div>
     
@@ -10335,7 +10335,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
     
     
     <div class="description">
-        <p>DEPRECATED (use sendtoaddress). Sent an amount from an account to a raven address.</p>
+        <p>DEPRECATED (use sendtoaddress). Sent an amount from an account to a avian address.</p>
     </div>
     
 
@@ -10471,7 +10471,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>The raven address to send funds to.</p></td>
+  <td class="description last"><p>The avian address to send funds to.</p></td>
 </tr>
 
   
@@ -10846,7 +10846,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>The raven address to send from.</p></td>
+  <td class="description last"><p>The avian address to send from.</p></td>
 </tr>
 
   
@@ -10881,7 +10881,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>The raven address to send to.</p></td>
+  <td class="description last"><p>The avian address to send to.</p></td>
 </tr>
 
   
@@ -11032,7 +11032,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>(boolean, optional, default=false) The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field.</p></td>
+  <td class="description last"><p>(boolean, optional, default=false) The fee will be deducted from the amount being sent. The recipient will receive less avians than you enter in the amount field.</p></td>
 </tr>
 
   
@@ -11365,7 +11365,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>A json object with addresses and amounts. &quot;address&quot;:amount  (numeric or string) The raven address is the key, the numeric amount (can be string) in &quot; + CURRENCY_UNIT + &quot; is the value</p></td>
+  <td class="description last"><p>A json object with addresses and amounts. &quot;address&quot;:amount  (numeric or string) The avian address is the key, the numeric amount (can be string) in &quot; + CURRENCY_UNIT + &quot; is the value</p></td>
 </tr>
 
   
@@ -11478,7 +11478,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>A json array with addresses. The fee will be equally deducted from the amount of each selected address. Those recipients will receive less ravens than you enter in their corresponding amount field. If no addresses are specified here, the sender pays the fee. Subtract fee from listed addresses.</p></td>
+  <td class="description last"><p>A json array with addresses. The fee will be equally deducted from the amount of each selected address. Those recipients will receive less avians than you enter in their corresponding amount field. If no addresses are specified here, the sender pays the fee. Subtract fee from listed addresses.</p></td>
 </tr>
 
   
@@ -11776,7 +11776,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>The raven address to send to.</p></td>
+  <td class="description last"><p>The avian address to send to.</p></td>
 </tr>
 
   
@@ -11927,7 +11927,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
       </td>
   
 
-  <td class="description last"><p>Default = false. The fee will be deducted from the amount being sent. The recipient will receive less ravens than you enter in the amount field.</p></td>
+  <td class="description last"><p>Default = false. The fee will be deducted from the amount being sent. The recipient will receive less avians than you enter in the amount field.</p></td>
 </tr>
 
   
@@ -12193,7 +12193,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
 
   
 
-  <td class="description last"><p>The raven address to be associated with an account.</p></td>
+  <td class="description last"><p>The avian address to be associated with an account.</p></td>
 </tr>
 
   
@@ -12607,7 +12607,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
 
   
 
-  <td class="description last"><p>The raven address to use for the private key.</p></td>
+  <td class="description last"><p>The avian address to use for the private key.</p></td>
 </tr>
 
   
@@ -12873,7 +12873,7 @@ client.wallet.importAddress({ script: 'myscript', label: 'testing', rescan: fals
     
     <div class="description">
         <p>Stores the wallet decryption key in memory for 'timeout' seconds.</p>
-<p>This is needed prior to performing transactions related to private keys such as sending ravens</p>
+<p>This is needed prior to performing transactions related to private keys such as sending avians</p>
 <p>Issuing the walletpassphrase command while the wallet is already unlocked will set a new unlock time that overrides the old one.</p>
     </div>
     
