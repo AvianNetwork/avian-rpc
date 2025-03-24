@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Avian Network - Avian RPC Home</title>
+  <title>Avian Network - Avian RPC client.ts</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -86,83 +88,100 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p></p>
-                    <h1>Home</h1>
+                    <p>Source</p>
+                    <h1>client.ts</h1>
                 </header>
                 
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><p><img src="https://github.com/AvianNetwork/avian-rpc/raw/main/media/repo-banner.png" alt="Avian RPC Banner"></p>
-<h1>Avian Network - Avian RPC</h1>
-<p><a href="https://aviannetwork.github.io/avian-rpc/Client.html" target="_blank">Documentation Website</a></p>
-<p>A client library to connect to Avian Core RPC in JavaScript.</p>
-<p><a href="https://www.npmjs.org/package/@aviannetwork/avian-rpc"><img src="https://img.shields.io/npm/v/@aviannetwork/avian-rpc.svg?style=flat-square" alt="NPM Package"></a></p>
-<p><strong>An Avian module for <a href="https://github.com/AvianNetwork/Avian">avian</a>.</strong></p>
-<h2>Getting Started</h2>
-<pre class="prettyprint source lang-sh"><code># Using npm
-npm install @aviannetwork/avian-rpc
+        <article>
+            <pre class="prettyprint source linenums"><code>import { Client as HyperbitClient } from '@hyperbitjs/rpc';
+import {
+  Assets,
+  Blockchain,
+  Messages,
+  Mining,
+  Misc,
+  Net,
+  RawTransactions,
+  Rewards,
+  Wallet,
+} from './methods';
+import { Config, IClient, RpcError } from './types';
 
-# Using yarn
-yarn add @aviannetwork/avian-rpc
-</code></pre>
-<h3>Usage</h3>
-<p>You can either write manually requests to your RPC connection via the <code>request</code> method, or you can use the built-in methods provided by the client class.</p>
-<h4>Manually</h4>
-<pre class="prettyprint source lang-javascript"><code>import { Client } from '@aviannetwork/avian-rpc';
+/**
+ * Create a RPC Client to connect to a Avian node.
+ * @class Client
+ * @category Client
+ * @param config
+ * @param {string} config.url Url endpoint to connect to node server
+ * @param {string} config.username RPC username
+ * @param {string} config.password RPC password
+ * @param {Objct=} config.httpOptions HTTP options object of values to add to request headers
+ * @example
+ *  import Client from '@aviannetwork/avian-rpc';
 
 const client = new Client({
-  url: 'http://127.0.0.1:7896',
+  url: 'http://127.0.0.1:9050',
   username: 'username',
   password: 'password',
 });
 
-client.request('getchaintips').then(response => {
-  console.log('response', response);
-});
-</code></pre>
-<h4>Built-in Methods</h4>
-<pre class="prettyprint source lang-javascript"><code>import { Client } from '@aviannetwork/avian-rpc';
-
-const client = new Client({
-  url: 'http://127.0.0.1:7896',
-  username: 'username',
-  password: 'password',
-});
-
-client.methods.listAssets().then(assets => {
+client.assets.listAssets().then(assets => {
   console.log('assets', assets);
 });
+ */
+export class Client implements IClient {
+  /** @type {Assets} */
+  public assets: Assets;
+  /** @type {Blockchain} */
+  public blockchain: Blockchain;
+  /** @type {Messages} */
+  public messages: Messages;
+  /** @type {Mining} */
+  public mining: Mining;
+  /** @type {Misc} */
+  public misc: Misc;
+  /** @type {Net} */
+  public net: Net;
+  /** @type {RawTransactions} */
+  public rawTransactions: RawTransactions;
+  /** @type {Rewards} */
+  public rewards: Rewards;
+  /** @type {Wallet} */
+  public wallet: Wallet;
+  private _instance: HyperbitClient;
+
+  constructor(config: Config) {
+    this._instance = new HyperbitClient(config);
+
+    this.assets = new Assets(this);
+    this.blockchain = new Blockchain(this);
+    this.messages = new Messages(this);
+    this.mining = new Mining(this);
+    this.misc = new Misc(this);
+    this.net = new Net(this);
+    this.rawTransactions = new RawTransactions(this);
+    this.rewards = new Rewards(this);
+    this.wallet = new Wallet(this);
+  }
+
+  /**
+   * Make a RPC request with a method command and payload
+   * @param {string} method Name of rpc command.
+   * @param {(Object|Array)=} params Data required by rpc command. Typically an object or an array.
+   * @returns {Promise}
+   */
+  request(method: string, params: any = []): Promise&lt;any | RpcError> {
+    return this._instance.request(method, params);
+  }
+}
 </code></pre>
-<h2>Examples and Documentation</h2>
-<p>See <a href="https://aviannetwork.github.io/avian-rpc/Client.html">documentation</a> for developer guides.</p>
-<h2>License</h2>
-<p>Code released under <a href="./LICENSE.md">the MIT license</a>.</p>
-<h3>Development</h3>
-<p>Some RPC commands within Avian have known bugs. You may experience them as a result. If you find that the issue comes from this library, please create an Issue so that it can be resolved quickly.</p></article>
+        </article>
     </section>
-
-
 
 
 

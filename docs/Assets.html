@@ -2516,6 +2516,200 @@
 
 
     
+    <h4 class="name" id="isValidVerifierString">
+        <a class="href-link" href="#isValidVerifierString">#</a>
+        
+        <span class="code-name">
+            
+                isValidVerifierString<span class="signature">(params)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Checks to see if the given verifier string is valid</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>params</code></td>
+  
+
+  <td class="type">
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+  
+  
+    
+<tr class="deep-level-1">
+  
+      <td class="name"><code>verifier_string</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">string</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"><p>The verifier string to check</p></td>
+</tr>
+
+  
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="methods_assets_assets.ts.html" class="button">View Source</a>
+            <span>
+                <a href="methods_assets_assets.ts.html">methods/assets/assets.ts</a>, <a href="methods_assets_assets.ts.html#line1042">line 1042</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>If the verifier string is valid, and the reason</p></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Promise.&lt;string></code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
     <h4 class="name" id="issue">
         <a class="href-link" href="#issue">#</a>
         
@@ -4351,12 +4545,12 @@
 
 
     
-    <h4 class="name" id="isValidVerifierString">
-        <a class="href-link" href="#isValidVerifierString">#</a>
+    <h4 class="name" id="listAddressRestrictions">
+        <a class="href-link" href="#listAddressRestrictions">#</a>
         
         <span class="code-name">
             
-                isValidVerifierString<span class="signature">(params)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span>
+                listAddressRestrictions<span class="signature">(params)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;string>>}</span>
             
         </span>
     </h4>
@@ -4365,7 +4559,8 @@
     
     
     <div class="description">
-        <p>Checks to see if the given verifier string is valid</p>
+        <p>List all assets that have frozen this address
+client.assets.listAddressRestrictions({ address: 'mwc5mCPAMWG2cVbvxG3dSqxKbxeLR1UMtu' })</p>
     </div>
     
 
@@ -4422,7 +4617,7 @@
     
 <tr class="deep-level-1">
   
-      <td class="name"><code>verifier_string</code></td>
+      <td class="name"><code>address</code></td>
   
 
   <td class="type">
@@ -4438,7 +4633,7 @@
 
   
 
-  <td class="description last"><p>The verifier string to check</p></td>
+  <td class="description last"><p>The address to list restrictions for</p></td>
 </tr>
 
   
@@ -4488,7 +4683,7 @@
         <p class="tag-source">
             <a href="methods_assets_assets.ts.html" class="button">View Source</a>
             <span>
-                <a href="methods_assets_assets.ts.html">methods/assets/assets.ts</a>, <a href="methods_assets_assets.ts.html#line1042">line 1042</a>
+                <a href="methods_assets_assets.ts.html">methods/assets/assets.ts</a>, <a href="methods_assets_assets.ts.html#line986">line 986</a>
             </span>
         </p>
     
@@ -4519,13 +4714,13 @@
 
 <div class="columns">
     
-    <div class='param-desc column is-7'><p>If the verifier string is valid, and the reason</p></div>
+    <div class='param-desc column is-7'><p>Array of asset names</p></div>
     
     
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<code class="param-type">Promise.&lt;string></code>
+<code class="param-type">Promise.&lt;Array.&lt;string>></code>
 
 
     </div>
@@ -5085,201 +5280,6 @@
     
         <pre class="prettyprint"><code>client.assets.listAddressesForTag({ tag_name: '#ASSET_ONE' });</code></pre>
     
-
-
-</div>
-            
-                <div class="member">
-
-
-    
-    <h4 class="name" id="listAddressRestrictions">
-        <a class="href-link" href="#listAddressRestrictions">#</a>
-        
-        <span class="code-name">
-            
-                listAddressRestrictions<span class="signature">(params)</span><span class="type-signature"> &rarr; {Promise.&lt;Array.&lt;string>>}</span>
-            
-        </span>
-    </h4>
-    
-
-    
-    
-    <div class="description">
-        <p>List all assets that have frozen this address
-client.assets.listAddressRestrictions({ address: 'mwc5mCPAMWG2cVbvxG3dSqxKbxeLR1UMtu' })</p>
-    </div>
-    
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-<div class="table-container">
-    <table class="params table">
-        <thead>
-        <tr>
-            
-            <th>Name</th>
-            
-
-            <th>Type</th>
-
-            
-
-            
-
-            <th class="last">Description</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        
-
-            
-<tr class="deep-level-0">
-  
-      <td class="name"><code>params</code></td>
-  
-
-  <td class="type">
-  
-  </td>
-
-  
-
-  
-
-  <td class="description last"></td>
-</tr>
-
-  
-  
-    
-<tr class="deep-level-1">
-  
-      <td class="name"><code>address</code></td>
-  
-
-  <td class="type">
-  
-      
-<code class="param-type">string</code>
-
-
-  
-  </td>
-
-  
-
-  
-
-  <td class="description last"><p>The address to list restrictions for</p></td>
-</tr>
-
-  
-
-
-        
-        </tbody>
-    </table>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="methods_assets_assets.ts.html" class="button">View Source</a>
-            <span>
-                <a href="methods_assets_assets.ts.html">methods/assets/assets.ts</a>, <a href="methods_assets_assets.ts.html#line986">line 986</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    <div class='param-desc column is-7'><p>Array of asset names</p></div>
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<code class="param-type">Promise.&lt;Array.&lt;string>></code>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
-
-
 
 
 </div>
